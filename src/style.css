@@ -1,3 +1,125 @@
-h1 {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #21201e;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.stylelogo {
+  height: 3em;
+}
+
+header {
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  background: #21201e;
+  color: white;
+  height: 3em;
+  align-items: center;
+}
+
+header > nav {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  background-color: var(--transparent1);
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menu > li {
+  transition: all 0.3s;
+}
+
+#menu > li.selected {
+  background-color: var(--color2);
+  border-radius: 5px;
+}
+
+#menu > li > a {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  border-top: 1px solid var(--color4);
+  width: 100%;
+  padding: 1em;
+  background: #21201e;
+  color: white;
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.show {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--transparent3);
+}
+
+.showImage {
+  width: 100%;
+  object-fit: contain;
+  max-height: 60vh;
+}
+
+.showTitle {
+  margin: 0;
+}
+
+.showDescription > p {
+  text-align: justify;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.interactions {
+  display: flex;
+  font-size: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#intro {
+  font-size: 2em;
 }
