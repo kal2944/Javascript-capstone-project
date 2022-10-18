@@ -127,3 +127,21 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.tittleimg {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.stylelikes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+}
