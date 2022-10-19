@@ -1,4 +1,5 @@
 import getShows from "./getShows.js";
+import getid from "./getid.js";
 
 
 export default async function popupadd (e){
@@ -21,22 +22,26 @@ export default async function popupadd (e){
             </div>
             <h3>comments</h3>
             <ul></ul>
-                <h2>movie</h2>
+                <h2>Descrpiton</h2>
             <div>${element.summary}</div>
                     <h3>add comment</h3>
                     <input type="text" placeholder="your name">
-                    <textarea placeholder="your insights">add your message</textarea>
-                    <button type="submit">submit</button>
+                    <textarea id='comment' placeholder="your insights">add your message</textarea>
+                    <button id="comments" type="submit">submit</button>
             </div>`;
             popupinfo.insertAdjacentHTML('beforeend', popup);
         });         
         const algo = document.getElementById('closepopup');
         algo.addEventListener('click',()=>{ 
-        document.body.style.overflow= 'auto';
-        popupinfo.style.display = 'none';
-        popupinfo.innerHTML = '';
+            document.body.style.overflow= 'auto';
+            popupinfo.style.display = 'none';
+            popupinfo.innerHTML = '';
+            });
 
-    })
-}
-
-
+        const comments = document.getElementById('comments');
+        comments.addEventListener('click',()=>{
+            const comment = document.getElementById('comment').value;
+            console.log(comment);
+            getid(comment);
+        })
+    }
