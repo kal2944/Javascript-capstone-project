@@ -15,7 +15,7 @@ export default async function popupadd (e){
                         <img id="imagen" class="styleclosepopup"  src="${element.image.original}" alt="" >
                      </div>
                 <div>
-                    <img id="${element.id}" src="/imgs/closexbutton.png"  class="styleimgmovie" alt="">
+                    <img id="closepopup" src="/imgs/closexbutton.png"  class="styleimgmovie" alt="">
                 </div>
             </div>
             <h3>comments</h3>
@@ -29,8 +29,12 @@ export default async function popupadd (e){
             </div>`;
             popupinfo.insertAdjacentHTML('beforeend', popup);
         });         
-        const algo = document.querySelector('.styleimgmovie');
-        algo.addEventListener('click',()=>{ popupinfo.style.display = 'none';})
+        const algo = document.getElementById('closepopup');
+        algo.addEventListener('click',()=>{ 
+        popupinfo.style.display = 'none';
+        popupinfo.innerHTML = '';
+
+    })
 }
 
 
