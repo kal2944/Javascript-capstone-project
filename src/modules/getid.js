@@ -13,6 +13,6 @@ export default async function getid(username, comments){
       body: JSON.stringify(data),
     },
   );
-  const result = await responst.text()
+  const result = await responst.text();
   console.log(result);
 };

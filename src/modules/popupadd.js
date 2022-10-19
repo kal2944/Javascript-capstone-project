@@ -26,31 +26,27 @@ export default async function popupadd (e){
             <div>${element.summary}</div>
                     <h3>add comment</h3>
                     <input id='username' type="text" placeholder="your name">
-                    <textarea id='comment' placeholder="your insights">add your message</textarea>
+                    <textarea id='comment' placeholder="your insights"></textarea>
                     <button id="comments" type="submit">submit</button>
             </div>`;
             popupinfo.insertAdjacentHTML('beforeend', popup);
         });         
         const algo = document.getElementById('closepopup');
-        algo.addEventListener('click',()=>{ 
-            document.body.style.overflow= 'auto';
+        if(algo===null){
             popupinfo.style.display = 'none';
             popupinfo.innerHTML = '';
-            });
-
-            // if(!localStorage.commentsData){
-            //     localStorage.commentDta =[];
-            // }else{
-            //     comment = 
-            // }
-
+            document.body.style.overflow= 'auto';
+        }else{
+            algo.addEventListener('click',()=>{ 
+                document.body.style.overflow= 'auto';
+                popupinfo.style.display = 'none';
+                popupinfo.innerHTML = '';
+                });
+        }
         const comments = document.getElementById('comments');
-        
         comments.addEventListener('click',()=>{
             const username = document.getElementById('username').value;
             const comment = document.getElementById('comment').value;
-            console.log(comment);
-            console.log(username)
             getid(username,comment);
         })
     }
