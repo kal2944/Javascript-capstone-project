@@ -162,13 +162,12 @@ footer {
   align-items: center;
   padding: 1em;
   width: 25%;
-  height: 80%;
   top: 7%;
   left: 35%;
   position: fixed;
   background: #fff;
   box-shadow: 0 0 5px #ccc;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .styleimagepopup{
