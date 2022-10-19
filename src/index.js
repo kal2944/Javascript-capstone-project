@@ -1,7 +1,6 @@
 import './style.css';
 import './imgs/logomenu.jpeg';
 import './imgs/closexbutton.png';
-import './imgs/cali.jpg';
 import getShows from './modules/getShows.js';
 import ShowLibrary from './modules/ShowLibrary.js';
 import popupadd from './modules/popupadd.js';
