@@ -3,6 +3,7 @@ import getShows from "./getShows.js";
 
 export default async function popupadd (e){
         const popupinfo = document.getElementById('popupinfo');
+        document.body.style.overflow= 'hidden';
         popupinfo.style.display = 'block';
         const commentmovie = parseInt(e.target.getAttribute('name'));
         let a =  await getShows().then((result)=>result);
@@ -31,6 +32,7 @@ export default async function popupadd (e){
         });         
         const algo = document.getElementById('closepopup');
         algo.addEventListener('click',()=>{ 
+        document.body.style.overflow= 'auto';
         popupinfo.style.display = 'none';
         popupinfo.innerHTML = '';
 
