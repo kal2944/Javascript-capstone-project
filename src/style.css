@@ -186,7 +186,7 @@ footer {
   right: 0;
   transition: opacity 500ms;
   bottom: 0;
-  display: block;/* it change the info of the popup */
+  display: none;/* it change the info of the popup */
 }
 
 .imagemovie{

@@ -15,6 +15,5 @@ getShows().then((result) => {
 });
 
 pruebapop.addEventListener('click', () => {
-  popupinfo.classList.display = 'flex';
-  alert('i press it');
+  popupinfo.classList.display = 'block';
 });
