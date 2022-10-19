@@ -149,18 +149,20 @@ footer {
 
 .popupinfo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  width: 44%;
-  height: 100%;
-  left: 25%;
-  position: relative;
-  background: #fff;
-  box-shadow: 0 0 5px #ccc;
-  margin-top: 0em;
-  margin-right: 0;
-  justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    width: 35%;
+    height: 92%;
+    top: 4%;
+    left: 30%;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    margin-top: 0em;
+    margin-right: 0;
+    justify-content: center;
+    margin: -4px;
 }
 
 .styleimagepopup{
