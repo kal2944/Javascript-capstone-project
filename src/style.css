@@ -152,15 +152,15 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 1em;
-  gap: 1em;
   width: 44%;
-  height: 95%;
+  height: 100%;
   left: 25%;
   position: relative;
   background: #fff;
   box-shadow: 0 0 5px #ccc;
-  margin-top: 1em;
+  margin-top: 0em;
   margin-right: 0;
+  justify-content: center;
 }
 
 .styleimagepopup{
@@ -171,7 +171,7 @@ footer {
 }
 
 .styleclosepopup{
-  width: 100%;
+  width: 70%;
 }
 
 .styleimgmovie{
@@ -186,7 +186,7 @@ footer {
   right: 0;
   transition: opacity 500ms;
   bottom: 0;
-  display: none;/* it change the info of the popup */
+  display: none;
 }
 
 .imagemovie{
@@ -194,4 +194,8 @@ footer {
   align-items: center;
   flex-direction: column;
   width: 50%;
+}
+
+textarea{
+  margin: 1em;
 }

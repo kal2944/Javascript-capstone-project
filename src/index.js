@@ -4,16 +4,15 @@ import './imgs/closexbutton.png';
 import './imgs/cali.jpg';
 import getShows from './modules/getShows.js';
 import ShowLibrary from './modules/ShowLibrary.js';
+import popupadd from './modules/popupadd.js';
 
 const showContainer = document.getElementById('showList');
-const pruebapop = document.getElementById('prueba');
-const popupinfo = document.getElementById('popupinfo');
 
 getShows().then((result) => {
   const showLib = new ShowLibrary(result);
   showLib.displayShows(6, showContainer);
 });
 
-pruebapop.addEventListener('click', () => {
-  popupinfo.classList.display = 'block';
-});
+showContainer.addEventListener('click', popupadd);
+
+
