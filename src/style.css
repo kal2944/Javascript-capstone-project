@@ -141,7 +141,7 @@ footer {
 
 #showList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .tittleimg{
@@ -155,36 +155,28 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-/* display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  width: 38%;
-  top: 0%;
-  left: 35%;
-  position: fixed;
-  background: #fff;
-  box-shadow: 0 0 5px #ccc;
-  justify-content: flex-start;
-  z-index: 1; */
 
-.popupinfo{
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 1em;
- width: 70%;
- top: 3%;
- left: 14%;
- position: fixed;
- background: #fff;
- box-shadow: 0 0 5px #ccc;
- justify-content: flex-start;
- z-index: 1;
- height: 100%;
- overflow: scroll;
- overflow-x: hidden;
-}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .popupinfo{
+    padding: 1em;
+    width: 80%;
+    top: 9%;
+    left: 10%;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    justify-content: flex-start;
+    z-index: 1;
+    height: 85%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 
 .styleimagepopup{
   display: flex;
@@ -219,6 +211,25 @@ footer {
   width: 50%;
 }
 
-textarea{
-  margin: 1em;
+@media screen and (min-width: 768px) {
+  
+#showList {
+  grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  .popupinfo{
+    padding: 1em;
+    width: 50%;
+    top: 1%;
+    left: 20%;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    justify-content: flex-start;
+    z-index: 1;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 }
