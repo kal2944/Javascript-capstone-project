@@ -10,7 +10,10 @@ export default async function popupadd (e){
         const idcard = parseInt(e.target.getAttribute('name'));
         let a =  await getShows().then((result)=>result);
         const popinfo = a.filter((info) => info.id === idcard);
+    
         popinfo.forEach(element => {
+   
+       
             const popup = `
             <div class="popupinfo" overflow-y:auto; id='${element.id}'>
                 <div class="styleimagepopup">

@@ -8,12 +8,13 @@ import idpost from './modules/like.js';
 
 const showContainer = document.getElementById('showList');
 
+
 showContainer.addEventListener('click', popupadd);
 
 getShows().then((result) => {
   const showLib = new ShowLibrary(result);
   showLib.displayShows(6, showContainer);
-
+  console.log(showContainer);
  const likebutton = document.querySelectorAll('.likebtn');
   likebutton.forEach((item)=>{
     item.addEventListener('click',()=>{
@@ -22,4 +23,5 @@ getShows().then((result) => {
     });
   }); 
 });
+
 
