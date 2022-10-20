@@ -17,4 +17,5 @@ export default async function createcomment(item){
       displaycoments.insertAdjacentHTML('beforeend', showcomments);
       commentscount.textContent = infocmnt.length;
 });
+    return infocmnt.length;
 }
