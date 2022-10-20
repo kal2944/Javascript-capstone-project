@@ -1,3 +1,6 @@
+import postlikes from "./like";
+
+
 export default class ShowLibrary {
   constructor(Array) {
     this.ShowArray = Array;
@@ -10,12 +13,12 @@ export default class ShowLibrary {
         <li class="show" id="${show.id}">
           <img src="${show.image.original}" alt="" class="showImage">
         <div class="tittleimg">
-          <div><h2 class="showTitle">${show.name}</h2></div>
+          <div><h2 class="${show.id}" showTitle">${show.name}</h2></div>
           <div class='stylelikes'>
-          <button class="like__btn">
-   <span id="icon"><i class="far fa-heart"></i></span>
-   <span id="count">0</span> Like
-</button>
+          <button id='${show.id}' class="likebtn">
+              <span id="${show.id}"><i class="far fa-heart"></i></span>
+              <span id="count-${show.id}">${postlikes(show.id)}</span> Like
+          </button>
           </div>
         </div>
           <div class="genres">

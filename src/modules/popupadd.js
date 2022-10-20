@@ -25,12 +25,12 @@ export default async function popupadd (e){
             <ul id='displaycomments'></ul>
                 <h2>Descrpiton</h2>
             <div>${element.summary}</div>
-            <form>
                     <h3>add comment</h3>
+            <div class='form'>
                     <input id='username' type="text" placeholder="your name">
                     <textarea id='comment' placeholder="your insights"></textarea>
                     <button name ='${element.id}'id="comments" type="submit">submit</button>
-            </form>
+            </div>
             </div>`;
             popupinfo.insertAdjacentHTML('beforeend', popup);
         });         
@@ -51,7 +51,7 @@ export default async function popupadd (e){
             popupinfo.innerHTML = '';
         }else{
             comments.addEventListener('click',postcoment);  
-            const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${idcard}`
+       const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${idcard}`
             const infocoment = await fetch(urlgetcomment,{
                 method: 'GET',
                 headers: {
@@ -64,7 +64,7 @@ export default async function popupadd (e){
               const displaycoments= document.getElementById('displaycomments');
               const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
               displaycoments.insertAdjacentHTML('beforeend', showcomments);
-              });
+              }); 
         }
       
 }

@@ -31,8 +31,9 @@ export default async function postcoment(e){
             },
           );
           const infocmnt = await infocoment.json();
+          console.log(infocmnt)
           const displaycoments= document.getElementById('displaycomments');
-          displaycoments.innerHTML='';
+          displaycoments.innerHTML=''; 
           infocmnt.forEach((item) => {
             const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
             displaycoments.insertAdjacentHTML('beforeend', showcomments);
