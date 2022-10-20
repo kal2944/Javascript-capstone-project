@@ -14,5 +14,5 @@ export default async function getid(username, comments){
     },
   );
   const result = await responst.text();
-  console.log(result);
+  return result;
 };

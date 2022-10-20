@@ -25,9 +25,7 @@ button{
   box-sizing: border-box;
 }
 
-h3{
-  margin-bottom: 1px;
-}
+
 
 nav {
   display: flex;
@@ -209,6 +207,12 @@ footer {
   align-items: center;
   flex-direction: column;
   width: 50%;
+}
+
+.headcomments{
+  display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 @media screen and (min-width: 768px) {

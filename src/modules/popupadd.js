@@ -1,11 +1,11 @@
 import getShows from "./getShows.js";
-import getid from "./getid.js";
 import postcoment from "./postcomments.js";
+import createcomment from "./createComment.js";
 
 
 export default async function popupadd (e){
         const popupinfo = document.getElementById('popupinfo');
-       /*  document.body.style.overflow= 'hidden'; */
+       document.body.style.overflow= 'hidden';
         popupinfo.style.display = 'block';
         const idcard = parseInt(e.target.getAttribute('name'));
         let a =  await getShows().then((result)=>result);
@@ -21,7 +21,12 @@ export default async function popupadd (e){
                     <img id="closepopup" src="/imgs/closexbutton.png"  class="styleimgmovie" alt="">
                 </div>
             </div>
+            <div class='headcomments'>
+            <div>
             <h3>comments</h3>
+            </div>
+            <span id='countcomments'></span>
+            </div>
             <ul id='displaycomments'></ul>
                 <h2>Descrpiton</h2>
             <div>${element.summary}</div>
@@ -51,20 +56,7 @@ export default async function popupadd (e){
             popupinfo.innerHTML = '';
         }else{
             comments.addEventListener('click',postcoment);  
-       const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${idcard}`
-            const infocoment = await fetch(urlgetcomment,{
-                method: 'GET',
-                headers: {
-                  'Content-type': 'application/json; charset=UTF-8',
-                },
-              },
-            );
-            const infocmnt = await infocoment.json();
-            infocmnt.forEach((item) => {
-              const displaycoments= document.getElementById('displaycomments');
-              const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
-              displaycoments.insertAdjacentHTML('beforeend', showcomments);
-              }); 
+            createcomment(idcard);
         }
       
 }

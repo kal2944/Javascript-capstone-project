@@ -4,7 +4,6 @@ import './imgs/closexbutton.png';
 import getShows from './modules/getShows.js';
 import ShowLibrary from './modules/ShowLibrary.js';
 import popupadd from './modules/popupadd.js';
-import postlikes from './modules/like.js';
 import idpost from './modules/like.js';
 
 const showContainer = document.getElementById('showList');
