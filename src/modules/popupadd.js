@@ -25,7 +25,7 @@ export default async function popupadd (e){
                 <h2>Descrpiton</h2>
             <div>${element.summary}</div>
                     <h3>add comment</h3>
-                    <input type="text" placeholder="your name">
+                    <input id='username' type="text" placeholder="your name">
                     <textarea id='comment' placeholder="your insights">add your message</textarea>
                     <button id="comments" type="submit">submit</button>
             </div>`;
@@ -38,10 +38,19 @@ export default async function popupadd (e){
             popupinfo.innerHTML = '';
             });
 
+            // if(!localStorage.commentsData){
+            //     localStorage.commentDta =[];
+            // }else{
+            //     comment = 
+            // }
+
         const comments = document.getElementById('comments');
+        
         comments.addEventListener('click',()=>{
+            const username = document.getElementById('username').value;
             const comment = document.getElementById('comment').value;
             console.log(comment);
-            getid(comment);
+            console.log(username)
+            getid(username,comment);
         })
     }
