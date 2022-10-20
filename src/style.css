@@ -168,6 +168,7 @@ footer {
   background: #fff;
   box-shadow: 0 0 5px #ccc;
   justify-content: flex-start;
+  z-index: 1;
 }
 
 .styleimagepopup{
