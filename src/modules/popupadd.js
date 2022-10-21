@@ -12,7 +12,7 @@ export default async function popupadd (e){
         const popinfo = a.filter((info) => info.id === commentmovie);
         popinfo.forEach(element => {
             const popup = `
-            <div class="popupinfo" id='${element.id}'>
+            <div class="popupinfo" overflow-y:auto; id='${element.id}'>
                 <div class="styleimagepopup">
                     <div class="imagemovie">
                         <img id="imagen" class="styleclosepopup"  src="${element.image.original}" alt="" >

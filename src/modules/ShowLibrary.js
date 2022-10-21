@@ -12,13 +12,10 @@ export default class ShowLibrary {
         <div class="tittleimg">
           <div><h2 class="showTitle">${show.name}</h2></div>
           <div class='stylelikes'>
-          <div>
-          <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart" style='display:none;'></i>
-          </div>
-           <div>
-           <span class="likeCount">1 like</span>
-           </div>
+          <button class="like__btn">
+   <span id="icon"><i class="far fa-heart"></i></span>
+   <span id="count">0</span> Like
+</button>
           </div>
         </div>
           <div class="genres">
