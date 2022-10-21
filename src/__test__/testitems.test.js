@@ -1,42 +1,52 @@
 /** * @jest-environment jsdom */
 
-import postlikes from "../modules/idpost.js";
-import ShowLibrary from "../modules/ShowLibrary.js"
+import ShowLibrary from './ShowLibrary.js';
 
-
-describe('testing adding elements',()=>{
-   
-    test('add four elements',()=>{
-        const show = new ShowLibrary();
-        show.ShowArray = [{
-            id: '1',
-            name: 'Franklin',
-            genres: 'Violence',
-            image:{original:'1'}
-          },
-          {
-            id: '2',
-            username: 'annonimus',
-            comment: 'kalidan the best',
-            image:{original:'2'}
-          },
-          {
-            id: '3',
-            username: 'abraham',
-            comment: 'crazy',
-            image:{original:'3'}
-          },
-          {
-            id: '4',
-            username: 'claudia',
-            comment: 'mom',
-            image:{original:'4'}
-          }];
-          postlikes(4);
-        document.body.innerHTML = '<div>'
+describe('testing adding elements', () => {
+  const showContainer = document.getElementById('showList');
+  it('add four elements', () => {
+    const show = new ShowLibrary();
+    show.ShowArray = [{
+      id: '1',
+      name: 'Franklin',
+      genres: ['Violence', 'action'],
+      image: { original: '1' },
+    },
+    {
+      id: '2',
+      username: 'annonimus',
+      comment: 'kalidan the best',
+      genres: ['Violence', 'action'],
+      image: { original: '2' },
+    },
+    {
+      id: '3',
+      username: 'abraham',
+      comment: 'crazy',
+      genres: ['Violence', 'action'],
+      image: { original: '3' },
+    },
+    {
+      id: '4',
+      username: 'claudia',
+      comment: 'mom',
+      genres: ['Violence', 'action'],
+      image: { original: '4' },
+    }];
+    document.body.innerHTML = '<div>'
             + ' <ul id="showlist"><li></li></ul>'
             + '<div id="countmovies"></div>';
 
-        expect(show.displayShows(3)).tobe(3);
-    })
+    expect(show.displayShows(show.ShowArray.length)).toBe(734);
+  });
+
+  it('when its empty', () => {
+    const show = new ShowLibrary();
+    show.ShowArray = [{}];
+    document.body.innerHTML = '<div>'
+          + ' <ul id="showlist"><li></li></ul>'
+          + '<div id="countmovies"></div>';
+
+    expect(show.displayShows(0, showContainer)).toBe(0);
+  });
 });

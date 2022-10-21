@@ -1,20 +1,17 @@
-import getShows from "./getShows.js";
-import postcoment from "./postcomments.js";
-import createcomment from "./createComment.js";
+import getShows from './getShows.js';
+import postcoment from './postcomments.js';
+import createcomment from './createComment.js';
 
+export default async function popupadd(e) {
+  const popupinfo = document.getElementById('popupinfo');
+  document.body.style.overflow = 'hidden';
+  popupinfo.style.display = 'block';
+  const idcard = parseFloat(e.target.getAttribute('name'));
+  const a = await getShows().then((result) => result);
+  const popinfo = a.filter((info) => info.id === idcard);
 
-export default async function popupadd (e){
-        const popupinfo = document.getElementById('popupinfo');
-       document.body.style.overflow= 'hidden';
-        popupinfo.style.display = 'block';
-        const idcard = parseInt(e.target.getAttribute('name'));
-        let a =  await getShows().then((result)=>result);
-        const popinfo = a.filter((info) => info.id === idcard);
-    
-        popinfo.forEach(element => {
-   
-       
-            const popup = `
+  popinfo.forEach((element) => {
+    const popup = `
             <div class="popupinfo" overflow-y:auto; id='${element.id}'>
                 <div class="styleimagepopup">
                     <div class="imagemovie">
@@ -40,27 +37,26 @@ export default async function popupadd (e){
                     <button name ='${element.id}'id="comments" type="submit">submit</button>
             </div>
             </div>`;
-            popupinfo.insertAdjacentHTML('beforeend', popup);
-        });         
-        const algo = document.getElementById('closepopup');
-        if(algo===null){
-            popupinfo.style.display = 'none';
-            popupinfo.innerHTML = '';
-            document.body.style.overflow= 'auto';
-        }else{
-            algo.addEventListener('click',()=>{ 
-                document.body.style.overflow= 'auto';
-                popupinfo.style.display = 'none';
-                popupinfo.innerHTML = '';
-                });
-        }
-        const comments = document.getElementById('comments');
-        if (comments===null){
-            popupinfo.innerHTML = '';
-        }else{
-            comments.addEventListener('click',postcoment);  
-            createcomment(idcard);
-        }
-      
-}
+    popupinfo.insertAdjacentHTML('beforeend', popup);
+  });
+  const algo = document.getElementById('closepopup');
+  if (algo === null) {
+    popupinfo.style.display = 'none';
+    popupinfo.innerHTML = '';
+    document.body.style.overflow = 'auto';
+  } else {
+    algo.addEventListener('click', () => {
+      document.body.style.overflow = 'auto';
+      popupinfo.style.display = 'none';
+      popupinfo.innerHTML = '';
+    });
+  }
 
+  const comments = document.getElementById('comments');
+  if (comments === null) {
+    popupinfo.innerHTML = '';
+  } else {
+    comments.addEventListener('click', postcoment);
+    createcomment(idcard);
+  }
+}
