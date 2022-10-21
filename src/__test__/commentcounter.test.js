@@ -1,4 +1,4 @@
-import postcomments from './postcomments';
+import postcomments from './postcomments.js';
 
 describe('Testing comments counter function', () => {
   test('Count comments', () => {
