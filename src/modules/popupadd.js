@@ -18,7 +18,7 @@ export default async function popupadd(e) {
                         <img id="imagen" class="styleclosepopup"  src="${element.image.original}" alt="" >
                      </div>
                 <div>
-                    <img id="closepopup" src="/imgs/closexbutton.png"  class="styleimgmovie" alt="">
+                    <img id="closepopup" src="./imgs/closexbutton.png"  class="styleimgmovie" alt="">
                 </div>
             </div> 
              <h2>Descrpiton</h2>
