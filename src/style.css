@@ -155,9 +155,7 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
-.popupinfo{
-  display: flex;
+/* display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1em;
@@ -168,7 +166,24 @@ footer {
   background: #fff;
   box-shadow: 0 0 5px #ccc;
   justify-content: flex-start;
-  z-index: 1;
+  z-index: 1; */
+
+.popupinfo{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 1em;
+ width: 70%;
+ top: 3%;
+ left: 14%;
+ position: fixed;
+ background: #fff;
+ box-shadow: 0 0 5px #ccc;
+ justify-content: flex-start;
+ z-index: 1;
+ height: 100%;
+ overflow: scroll;
+ overflow-x: hidden;
 }
 
 .styleimagepopup{
