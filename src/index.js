@@ -13,7 +13,7 @@ showContainer.addEventListener('click', popupadd);
 
 getShows().then((result) => {
   const showLib = new ShowLibrary(result);
-  showLib.displayShows(6, showContainer);
+  showLib.displayShows(6);
  const likebutton = document.querySelectorAll('.likebtn');
   likebutton.forEach((item)=>{
     item.addEventListener('click',()=>{

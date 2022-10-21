@@ -61,6 +61,13 @@ ul {
   padding: 0;
 }
 
+#intro{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: larger;
+    gap: 5em;
+}
 #menu {
   background-color: var(--transparent1);
   display: flex;
@@ -133,11 +140,7 @@ footer {
   justify-content: space-evenly;
 }
 
-#intro {
-  font-size: 2em;
-  display: flex;
-  gap: 5em;
-}
+
 
 #showList {
   display: grid;
@@ -248,5 +251,12 @@ footer {
     height: 100%;
     overflow: scroll;
     overflow-x: hidden;
+  }
+
+  #intro{
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: xx-large;
   }
 }

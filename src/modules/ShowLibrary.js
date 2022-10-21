@@ -6,7 +6,8 @@ export default class ShowLibrary {
     this.ShowArray = Array;
   }
 
-  displayShows(numberOfItems, showContainer) {
+  displayShows(numberOfItems) {
+    const showContainer = document.getElementById('showList');
     let count = 0;
     for (let i = 0; i < numberOfItems; i += 1) {
       count++;
@@ -38,6 +39,7 @@ export default class ShowLibrary {
     }
     const countmovies = document.getElementById('countmovies');
     countmovies.textContent = count;
+    return count;
 
   }
 }
