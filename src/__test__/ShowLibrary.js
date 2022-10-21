@@ -3,7 +3,7 @@ export default class ShowLibrary {
     this.ShowArray = Array;
   }
 
-  displayShows(numberOfItems, showContainer) {
+  displayShows(numberOfItems) {
     let count = 0;
     for (let i = 0; i < numberOfItems; i += 1) {
       count += 1;
@@ -31,7 +31,8 @@ export default class ShowLibrary {
               </div>
               <div>${show.id}</div>
         </li>`;
-      showContainer.insertAdjacentHTML('beforeend', htmlString);
+      /*   showContainer.insertAdjacentHTML('beforeend', htmlString); */
+      return htmlString.length;
     }
     const countmovies = document.getElementById('countmovies');
     countmovies.textContent = count;

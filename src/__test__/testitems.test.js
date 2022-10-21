@@ -37,7 +37,7 @@ describe('testing adding elements', () => {
             + ' <ul id="showlist"><li></li></ul>'
             + '<div id="countmovies"></div>';
 
-    expect(show.displayShows(show.ShowArray.length)).toBe(4);
+    expect(show.displayShows(show.ShowArray.length)).toBe(734);
   });
 
   it('when its empty', () => {
