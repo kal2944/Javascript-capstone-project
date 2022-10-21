@@ -5,7 +5,6 @@ import ShowLibrary from "./ShowLibrary";
 describe('testing adding elements',()=>{
    
     it('add four elements',()=>{
-      const showContainer = document.getElementById('showList');
         const show = new ShowLibrary();
         show.ShowArray = [{
             id: '1',

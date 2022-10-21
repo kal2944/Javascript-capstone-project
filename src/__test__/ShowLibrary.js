@@ -5,7 +5,6 @@ export default class ShowLibrary {
   }
 
   displayShows(numberOfItems) {
-    const showContainer = document.getElementById('showList');
     let count = 0;
     for (let i = 0; i < numberOfItems; i += 1) {
       count++;
