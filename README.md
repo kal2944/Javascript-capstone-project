@@ -6,7 +6,10 @@ The JavaScript capstone project is about building a web application based on an 
 - A home page showing a list of items that you can "like."
 - A popup window with more data about an item that you can comment on it or reserve it for a period of time.
 
-![screenshot](imgs/capstone-project-screenshot.png)
+<div align="center">
+<img  src="https://user-images.githubusercontent.com/99416452/197285485-76fb9f85-e314-4fa9-8d16-d81ec0c97045.png">
+</div>
+
 
 ## Built With
 
@@ -22,7 +25,7 @@ The JavaScript capstone project is about building a web application based on an 
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://kal2944.github.io/Javascript-capstone-project/)
 
 
 ## To get a local copy run the following steps:
