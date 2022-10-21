@@ -22,19 +22,20 @@ export default async function postcoment(e){
             const result = await responst.text()
             console.log(result);
         }
-  const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${item}`
-      console.log(urlgetcomment);
-        const infocoment = await fetch(urlgetcomment,{
-            method: 'GET',
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8',
+        const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${item}`
+          const infocoment = await fetch(urlgetcomment,{
+              method: 'GET',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
             },
-          },
-        );
-        const infocmnt = await infocoment.json();
-        infocmnt.forEach((item) => {
+          );
+          const infocmnt = await infocoment.json();
           const displaycoments= document.getElementById('displaycomments');
-          const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
-          displaycoments.insertAdjacentHTML('beforeend', showcomments);
-          });
+          displaycoments.innerHTML='';
+          infocmnt.forEach((item) => {
+            const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
+            displaycoments.insertAdjacentHTML('beforeend', showcomments);
+            });
+
 }

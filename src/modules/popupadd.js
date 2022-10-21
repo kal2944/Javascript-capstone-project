@@ -7,9 +7,9 @@ export default async function popupadd (e){
         const popupinfo = document.getElementById('popupinfo');
        /*  document.body.style.overflow= 'hidden'; */
         popupinfo.style.display = 'block';
-        const commentmovie = parseInt(e.target.getAttribute('name'));
+        const idcard = parseInt(e.target.getAttribute('name'));
         let a =  await getShows().then((result)=>result);
-        const popinfo = a.filter((info) => info.id === commentmovie);
+        const popinfo = a.filter((info) => info.id === idcard);
         popinfo.forEach(element => {
             const popup = `
             <div class="popupinfo" overflow-y:auto; id='${element.id}'>
@@ -50,7 +50,19 @@ export default async function popupadd (e){
         }else{
             comments.addEventListener('click',postcoment);  
         }
-
-     
+        const urlgetcomment=`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OfV1qInwl9XDUHwiPKmO/comments?item_id=${idcard}`
+          const infocoment = await fetch(urlgetcomment,{
+              method: 'GET',
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+            },
+          );
+          const infocmnt = await infocoment.json();
+          infocmnt.forEach((item) => {
+            const displaycoments= document.getElementById('displaycomments');
+            const showcomments =`<li>${item.creation_date} : ${item.username} :${item.comment} </li>`;
+            displaycoments.insertAdjacentHTML('beforeend', showcomments);
+            });
 }
 
