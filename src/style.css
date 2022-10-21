@@ -110,7 +110,7 @@ footer {
 }
 
 .showImage {
-  width: 100%;
+  width: 70%;
   object-fit: contain;
   max-height: 60vh;
 }
@@ -135,6 +135,8 @@ footer {
 
 #intro {
   font-size: 2em;
+  display: flex;
+  gap: 5em;
 }
 
 #showList {
@@ -191,6 +193,11 @@ footer {
   width: 2em;
 }
 
+#displaycomments{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .overinfo{
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -213,6 +220,12 @@ footer {
   display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.displaymovies{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 1em;
 }
 
 @media screen and (min-width: 768px) {

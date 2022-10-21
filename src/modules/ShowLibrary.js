@@ -36,7 +36,8 @@ export default class ShowLibrary {
         </li>`;
       showContainer.insertAdjacentHTML('beforeend', htmlString);
     }
-    
+    const countmovies = document.getElementById('countmovies');
+    countmovies.textContent = count;
 
   }
 }
