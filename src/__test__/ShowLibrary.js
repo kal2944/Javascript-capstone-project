@@ -1,13 +1,12 @@
-
 export default class ShowLibrary {
   constructor(Array) {
     this.ShowArray = Array;
   }
 
-  displayShows(numberOfItems) {
+  displayShows(numberOfItems, showContainer) {
     let count = 0;
     for (let i = 0; i < numberOfItems; i += 1) {
-      count++;
+      count += 1;
       const show = this.ShowArray[i];
       const htmlString = `
         <li class="show" id="${show.id}">
@@ -32,10 +31,10 @@ export default class ShowLibrary {
               </div>
               <div>${show.id}</div>
         </li>`;
+      showContainer.insertAdjacentHTML('beforeend', htmlString);
     }
     const countmovies = document.getElementById('countmovies');
     countmovies.textContent = count;
     return count;
-
   }
 }
