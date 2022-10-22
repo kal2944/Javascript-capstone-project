@@ -6,7 +6,7 @@ The JavaScript capstone project is about building a web application based on an 
 - A home page showing a list of items that you can "like."
 - A popup window with more data about an item that you can comment on it or reserve it for a period of time.
 
-![screenshot](img/)
+![screenshot](imgs/capstone-project-screenshot.png)
 
 ## Built With
 
@@ -14,6 +14,11 @@ The JavaScript capstone project is about building a web application based on an 
 - CSS
 - Javascript ES6
 - Jest
+
+
+## Presentation video
+
+[video Link](https://user-images.githubusercontent.com/99416452/197282376-50f5b22c-bb46-4ad0-9a54-95f2ff2d0e06.mp4)
 
 ## Live Demo
 
