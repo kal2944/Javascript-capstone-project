@@ -26,10 +26,7 @@ export default class ShowLibrary {
           ${show.genres.join(' ')}
           </div>
               <div>
-                <button name='${show.id}' type="button">comments</button>
-              </div>
-              <div>
-                <button type="button">Reservations</button>
+                <button name='${show.id}' type="button">Comments</button>
               </div>
               <div>${show.id}</div>
         </li>`;

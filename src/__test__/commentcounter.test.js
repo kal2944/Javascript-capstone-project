@@ -1,6 +1,5 @@
 import postcomments from './postcomments';
 
-
 describe('Testing comments counter function', () => {
   test('Count comments', () => {
     const items = [{
@@ -9,7 +8,7 @@ describe('Testing comments counter function', () => {
       comment: 'Best one',
     },
     {
-      item_id: 'item2', 
+      item_id: 'item2',
       username: 'kalkidan',
       comment: 'nice movie',
     },

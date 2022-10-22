@@ -20,7 +20,14 @@ export default async function popupadd(e) {
                 <div>
                     <img id="closepopup" src="/imgs/closexbutton.png"  class="styleimgmovie" alt="">
                 </div>
-            </div>
+            </div> 
+             <h2>Descrpiton</h2>
+            <div>${element.summary}</div>
+                    <h3>add comment</h3>
+            <div class='form'>
+                    <input id='username' type="text" placeholder="your name">
+                    <textarea id='comment' placeholder="your insights"></textarea>
+                    <button name ='${element.id}'id= "comments" type="submit">submit</button>
             <div class='headcomments'>
             <div>
             <h3>comments</h3>
@@ -28,13 +35,7 @@ export default async function popupadd(e) {
             <span id='countcomments'></span>
             </div>
             <ul id='displaycomments'></ul>
-                <h2>Descrpiton</h2>
-            <div>${element.summary}</div>
-                    <h3>add comment</h3>
-            <div class='form'>
-                    <input id='username' type="text" placeholder="your name">
-                    <textarea id='comment' placeholder="your insights"></textarea>
-                    <button name ='${element.id}'id="comments" type="submit">submit</button>
+              
             </div>
             </div>`;
     popupinfo.insertAdjacentHTML('beforeend', popup);

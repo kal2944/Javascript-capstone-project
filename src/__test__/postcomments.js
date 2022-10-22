@@ -1,2 +1,2 @@
-const postcomments = (commentList) =>commentList.length;
+const postcomments = (commentList) => commentList.length;
 export default postcomments;
