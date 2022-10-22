@@ -25,8 +25,6 @@ button{
   box-sizing: border-box;
 }
 
-
-
 nav {
   display: flex;
   align-items: center;
@@ -63,11 +61,12 @@ ul {
 
 #intro{
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: larger;
-    gap: 5em;
+  flex-direction: row;
+  align-items: center;
+  font-size: larger;
+  gap: 5em;
 }
+
 #menu {
   background-color: var(--transparent1);
   display: flex;
@@ -108,16 +107,19 @@ footer {
 }
 
 .show {
-  padding: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
   background-color: var(--transparent3);
+  border: 1px solid rgb(169 151 151 / 80%);
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .showImage {
-  width: 70%;
+  width: 60%;
   object-fit: contain;
   max-height: 60vh;
 }
@@ -127,7 +129,7 @@ footer {
 }
 
 .showDescription > p {
-  text-align: justify;
+  text-align: center;
   height: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -139,8 +141,6 @@ footer {
   width: 100%;
   justify-content: space-evenly;
 }
-
-
 
 #showList {
   display: grid;
@@ -160,26 +160,26 @@ footer {
 }
 
 .form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
 
-  .popupinfo{
-    padding: 1em;
-    width: 80%;
-    top: 9%;
-    left: 10%;
-    position: fixed;
-    background: #fff;
-    box-shadow: 0 0 5px #ccc;
-    justify-content: flex-start;
-    z-index: 1;
-    height: 85%;
-    overflow: scroll;
-    overflow-x: hidden;
-  }
+.popupinfo{
+  padding: 1em;
+  width: 80%;
+  top: 9%;
+  left: 10%;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 0 5px #ccc;
+  justify-content: flex-start;
+  z-index: 1;
+  height: 85%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
 .styleimagepopup{
   display: flex;
@@ -189,7 +189,7 @@ footer {
 }
 
 .styleclosepopup{
-  width: 70%;
+  width: 45%;
 }
 
 .styleimgmovie{
@@ -198,9 +198,11 @@ footer {
 
 #displaycomments{
   display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
 }
+
 .overinfo{
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
@@ -221,42 +223,41 @@ footer {
 
 .headcomments{
   display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
 .displaymovies{
   display: flex;
   align-items: flex-start;
   flex-direction: row;
   gap: 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-size: large;
 }
 
 @media screen and (min-width: 768px) {
-  
-#showList {
-  grid-template-columns: repeat(3, 1fr);
-
+  #showList {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .popupinfo{
-    padding: 1em;
-    width: 50%;
-    top: 1%;
-    left: 20%;
-    position: fixed;
-    background: #fff;
-    box-shadow: 0 0 5px #ccc;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    padding-top: 1rem;
+    padding-right: 1px;
+    padding-bottom: 1rem;
+    padding-left: 9px;
     z-index: 1;
-    height: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
   }
 
   #intro{
     display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: xx-large;
+    flex-direction: row;
+    align-items: center;
+    font-size: xx-large;
+    padding-left: 300px;
   }
 }
