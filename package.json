@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git+https://github.com/kal2944/Javascript-capstone-project.git"
   },
   "keywords": [],

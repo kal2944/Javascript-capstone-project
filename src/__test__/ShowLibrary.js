@@ -1,11 +1,9 @@
-import postlikes from './like.js';
-
 export default class ShowLibrary {
   constructor(Array) {
     this.ShowArray = Array;
   }
 
-  displayShows(numberOfItems, showContainer) {
+  displayShows(numberOfItems) {
     let count = 0;
     for (let i = 0; i < numberOfItems; i += 1) {
       count += 1;
@@ -18,7 +16,7 @@ export default class ShowLibrary {
           <div class='stylelikes'>
           <button id='${show.id}' class="likebtn">
               <span id="${show.id}"><i class="far fa-heart"></i></span>
-              <span id="count-${show.id}">${postlikes(show.id)}</span> Like
+              <span id="count-${show.id}"></span> Like
           </button>
           </div>
         </div>
@@ -33,7 +31,8 @@ export default class ShowLibrary {
               </div>
               <div>${show.id}</div>
         </li>`;
-      showContainer.insertAdjacentHTML('beforeend', htmlString);
+      /*   showContainer.insertAdjacentHTML('beforeend', htmlString); */
+      return htmlString.length;
     }
     const countmovies = document.getElementById('countmovies');
     countmovies.textContent = count;
