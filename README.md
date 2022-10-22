@@ -60,6 +60,8 @@ The JavaScript capstone project is about building a web application based on an 
 
 ## 🤝 Contributing
 
+contributer:- Cesar Alberto Valencia Aguilar
+
 Contributions, issues, and feature requests are welcome!
 
 ## Show your support
